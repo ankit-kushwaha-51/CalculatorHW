@@ -44,5 +44,11 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.square(row['Value 1']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
 
+    def test_squareroot(self):
+        test_data = CsvReader('/src/Squareroot.csv').data
+        for row in test_data:
+            self.assertEqual(self.calculator.squareroot(row['Value 1']), round(float(row['Result']),8))
+            self.assertEqual(self.calculator.result, round(float(row['Result']),8))
+
 if __name__ == '__main__':
     unittest.main()
