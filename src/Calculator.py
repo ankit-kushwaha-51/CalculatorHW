@@ -60,3 +60,7 @@ class Calculator:
         self.result = multiplication(a, b)
         return self.result
 
+    def divide(self, a, b):
+        self.result = division(a, b)
+        return self.result
+
